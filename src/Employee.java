@@ -34,4 +34,40 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public static int getLicznik() {
+        return licznik;
+    }
+
+    public static void setLicznik(int licznik) {
+        Employee.licznik = licznik;
+    }
 }
