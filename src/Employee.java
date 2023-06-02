@@ -30,4 +30,8 @@ public class Employee {
                 ", salary=" + salary +
                 '}';
     }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
 }
