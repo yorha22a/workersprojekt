@@ -16,4 +16,7 @@ public class Employee {
     public int getEmployeeID() {
         return employeeID;
     }
+    public String getPosition() {
+        return position;
+    }
 }
