@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class EmployeeManager {
@@ -38,5 +39,11 @@ public class EmployeeManager {
         return null;
     }
 
-
+    public void listAllEmployees(){
+        ArrayList<Employee> employeeList = new ArrayList<>(employees.values());
+        for (Employee employee: employeeList
+        ) {
+            System.out.println(employee);
+        }
+    }
 }
