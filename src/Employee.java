@@ -12,4 +12,8 @@ public class Employee {
         this.employeeID = employeeID;
         this.salary = salary;
     }
+
+    public int getEmployeeID() {
+        return employeeID;
+    }
 }
