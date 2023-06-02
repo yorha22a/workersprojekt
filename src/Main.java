@@ -27,6 +27,8 @@ public class Main {
             System.out.println("6.Wyszukaj pracownika po pozycji");
             System.out.println("Inna wartosc zakonczy program");
             int input = Integer.parseInt(bufferedReader.readLine());
+            Scanner scanner = new Scanner(System.in);
+
             switch (input){
                 case 1:
                     String firstName;
@@ -34,7 +36,6 @@ public class Main {
                     String position1;
                     int salary;
 
-                    Scanner scanner = new Scanner(System.in);
 
                     System.out.println("Podaj imię ");
                     firstName = scanner.next();
@@ -55,11 +56,22 @@ public class Main {
                 }
                 case 3:
                 {
+                    System.out.println("Podaj id");
                     int id = Integer.parseInt(bufferedReader.readLine());
-                    Employee employee = employeeManager.searchEmployeeByID(id);
-                    if(employee != null){
-                        employee.setSalary(10000);
-                        employeeManager.updateEmployee(id,employee);}
+                    String position;
+                    Employee newEmployee = employeeManager.searchEmployeeByID(id);
+                    System.out.println(" Podaj nową pozycję ");
+                    String inputPosition = scanner.next();
+                    if(!inputPosition.isEmpty()) {
+                        position = inputPosition;
+                        newEmployee.setPosition(position);
+                    }
+
+
+                    System.out.println("Podaj wynagrodzenie");
+                    int inputSalary = scanner.nextInt();
+                    newEmployee.setSalary(inputSalary);
+                    employeeManager.updateEmployee(id, newEmployee);
                     break;
 
                 }
