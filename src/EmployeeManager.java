@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
 public class EmployeeManager {
 
@@ -45,5 +47,18 @@ public class EmployeeManager {
         ) {
             System.out.println(employee);
         }
+    }
+
+
+    public HashSet<Employee> searchEmployeesByPosition(String position){
+        HashSet<Employee> employeeList = new HashSet<>(employees.values());
+        Iterator<Employee> employeeIterator = employeeList.iterator();
+        while(employeeIterator.hasNext())
+        {
+            Employee employee = employeeIterator.next();
+            if(!employee.getPosition().equals(position))
+                employeeIterator.remove();
+        }
+        return employeeList;
     }
 }
