@@ -4,15 +4,15 @@ public class Employee {
     private String position;
     private int employeeID;
     private int salary;
+    private static int licznik = 0;
 
-    public Employee(String firstName, String lastName, String position, int employeeID, int salary) {
+    public Employee(String firstName, String lastName, String position,  int salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
-        this.employeeID = employeeID;
+        this.employeeID = licznik++;
         this.salary = salary;
     }
-
     public int getEmployeeID() {
         return employeeID;
     }
