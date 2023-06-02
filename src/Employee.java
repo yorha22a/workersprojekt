@@ -19,4 +19,15 @@ public class Employee {
     public String getPosition() {
         return position;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", position='" + position + '\'' +
+                ", employeeID=" + employeeID +
+                ", salary=" + salary +
+                '}';
+    }
 }
